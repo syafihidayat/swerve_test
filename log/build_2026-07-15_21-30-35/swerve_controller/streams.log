@@ -1,0 +1,33 @@
+[0.014s] Invoking command in '/home/syafihidayat/swerve_test/build/swerve_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
+[0.063s] [35m[1mConsolidate compiler generated dependencies of target swerve_controller_node[0m
+[0.079s] [ 20%] [32mBuilding CXX object CMakeFiles/swerve_controller_node.dir/src/swerve_controller_node.cpp.o[0m
+[2.674s] [ 40%] [32m[1mLinking CXX executable swerve_controller_node[0m
+[2.875s] [100%] Built target swerve_controller_node
+[2.891s] Invoked command in '/home/syafihidayat/swerve_test/build/swerve_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
+[2.893s] Invoking command in '/home/syafihidayat/swerve_test/build/swerve_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_controller
+[2.901s] -- Install configuration: ""
+[2.901s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/lib/swerve_controller/swerve_controller_node
+[2.901s] -- Set runtime path of "/home/syafihidayat/swerve_test/install/swerve_controller/lib/swerve_controller/swerve_controller_node" to ""
+[2.901s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/launch
+[2.901s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/config
+[2.902s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/config/params.yaml
+[2.902s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/include/
+[2.902s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/include//pid.h
+[2.902s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/include//odometry.h
+[2.903s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/include//kinematic.h
+[2.903s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/ament_index/resource_index/package_run_dependencies/swerve_controller
+[2.903s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/ament_index/resource_index/parent_prefix_path/swerve_controller
+[2.904s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/environment/ament_prefix_path.sh
+[2.904s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/environment/ament_prefix_path.dsv
+[2.905s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/environment/path.sh
+[2.905s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/environment/path.dsv
+[2.905s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/local_setup.bash
+[2.906s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/local_setup.sh
+[2.906s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/local_setup.zsh
+[2.906s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/local_setup.dsv
+[2.906s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.dsv
+[2.907s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/ament_index/resource_index/packages/swerve_controller
+[2.908s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/cmake/swerve_controllerConfig.cmake
+[2.909s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/cmake/swerve_controllerConfig-version.cmake
+[2.909s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.xml
+[2.912s] Invoked command in '/home/syafihidayat/swerve_test/build/swerve_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_controller

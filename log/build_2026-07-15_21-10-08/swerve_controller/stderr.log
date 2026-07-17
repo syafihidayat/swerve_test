@@ -1,0 +1,8 @@
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:1:10:[m[K [01;31m[Kfatal error: [m[KKinematic.h: No such file or directory
+    1 | #include [01;31m[K"Kinematic.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/swerve_controller_node.dir/build.make:104: CMakeFiles/swerve_controller_node.dir/src/kinematic.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/swerve_controller_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

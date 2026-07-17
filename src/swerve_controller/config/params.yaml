@@ -1,0 +1,9 @@
+wheel_radius: 0.05
+
+wheelbase: 0.32
+
+trackwidth: 0.28
+
+max_speed: 3.0
+
+max_steering: 3.14

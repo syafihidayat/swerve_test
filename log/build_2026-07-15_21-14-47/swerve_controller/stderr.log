@@ -1,0 +1,32 @@
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In constructor ‘[01m[KKinematic::Kinematic(Kinematic::base, int, float, float, float, float, float, float)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:11:28:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+   11 |       wheel_circumference_([01;31m[KPI[m[K * wheel_diameter),
+      |                            [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:17:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+   17 |     motor_power_max_voltage = [01;31m[Kconstrain[m[K(motor_power_max_voltage, 0, motor_operating_voltage);
+      |                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[KKinematic::module_state Kinematic::calculateModuleStates(float, float, float)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:56:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+   56 |     state.speed1 = [01;31m[Kconstrain[m[K(speed_mps[0] / wheel_circumference_, -max_rps_, max_rps_);
+      |                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:132:20:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+  132 |     while (delta > [01;31m[KPI[m[K)  delta -= 2 * PI;
+      |                    [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:133:21:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+  133 |     while (delta < -[01;31m[KPI[m[K) delta += 2 * PI;
+      |                     [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:135:23:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+  135 |     if (fabs(delta) > [01;31m[KPI[m[K / 2.0)
+      |                       [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kfloat Kinematic::toRad(float)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:154:18:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+  154 |     return deg * [01;31m[KPI[m[K / 180.0;
+      |                  [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kfloat Kinematic::toDeg(float)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:159:26:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+  159 |     return rad * 180.0 / [01;31m[KPI[m[K;
+      |                          [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/swerve_controller_node.dir/build.make:104: CMakeFiles/swerve_controller_node.dir/src/kinematic.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/swerve_controller_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

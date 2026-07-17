@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target kinematic_node[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/kinematic_node.dir/src/kinematic.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable kinematic_node[0m
+[100%] Built target kinematic_node
+-- Install configuration: ""
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/lib/swerve_control/kinematic_node
+-- Set runtime path of "/home/syafihidayat/swerve_test/install/swerve_control/lib/swerve_control/kinematic_node" to ""
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/package_run_dependencies/swerve_control
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/parent_prefix_path/swerve_control
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.sh
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.dsv
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.sh
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.dsv
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.bash
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.sh
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.zsh
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.dsv
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.dsv
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/packages/swerve_control
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig.cmake
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig-version.cmake
+-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.xml

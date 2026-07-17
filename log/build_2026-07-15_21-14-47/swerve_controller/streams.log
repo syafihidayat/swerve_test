@@ -1,0 +1,35 @@
+[0.014s] Invoking command in '/home/syafihidayat/swerve_test/build/swerve_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
+[0.074s] [ 20%] [32mBuilding CXX object CMakeFiles/swerve_controller_node.dir/src/kinematic.cpp.o[0m
+[0.334s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In constructor ‘[01m[KKinematic::Kinematic(Kinematic::base, int, float, float, float, float, float, float)[m[K’:
+[0.335s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:11:28:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.335s]    11 |       wheel_circumference_([01;31m[KPI[m[K * wheel_diameter),
+[0.335s]       |                            [01;31m[K^~[m[K
+[0.337s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:17:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+[0.338s]    17 |     motor_power_max_voltage = [01;31m[Kconstrain[m[K(motor_power_max_voltage, 0, motor_operating_voltage);
+[0.338s]       |                               [01;31m[K^~~~~~~~~[m[K
+[0.341s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[KKinematic::module_state Kinematic::calculateModuleStates(float, float, float)[m[K’:
+[0.341s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:56:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+[0.341s]    56 |     state.speed1 = [01;31m[Kconstrain[m[K(speed_mps[0] / wheel_circumference_, -max_rps_, max_rps_);
+[0.341s]       |                    [01;31m[K^~~~~~~~~[m[K
+[0.343s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’:
+[0.343s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:132:20:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.344s]   132 |     while (delta > [01;31m[KPI[m[K)  delta -= 2 * PI;
+[0.344s]       |                    [01;31m[K^~[m[K
+[0.345s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:133:21:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.345s]   133 |     while (delta < -[01;31m[KPI[m[K) delta += 2 * PI;
+[0.345s]       |                     [01;31m[K^~[m[K
+[0.347s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:135:23:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.347s]   135 |     if (fabs(delta) > [01;31m[KPI[m[K / 2.0)
+[0.347s]       |                       [01;31m[K^~[m[K
+[0.350s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kfloat Kinematic::toRad(float)[m[K’:
+[0.350s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:154:18:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.350s]   154 |     return deg * [01;31m[KPI[m[K / 180.0;
+[0.350s]       |                  [01;31m[K^~[m[K
+[0.352s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:[m[K In member function ‘[01m[Kfloat Kinematic::toDeg(float)[m[K’:
+[0.352s] [01m[K/home/syafihidayat/swerve_test/src/swerve_controller/src/kinematic.cpp:159:26:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[0.352s]   159 |     return rad * 180.0 / [01;31m[KPI[m[K;
+[0.352s]       |                          [01;31m[K^~[m[K
+[0.387s] gmake[2]: *** [CMakeFiles/swerve_controller_node.dir/build.make:104: CMakeFiles/swerve_controller_node.dir/src/kinematic.cpp.o] Error 1
+[0.388s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/swerve_controller_node.dir/all] Error 2
+[0.388s] gmake: *** [Makefile:146: all] Error 2
+[0.392s] Invoked command in '/home/syafihidayat/swerve_test/build/swerve_controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
