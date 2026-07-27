@@ -62,6 +62,12 @@ private:
         Kinematic::module_state state = kinematic_.getModuleStates(vx, vy, wz);
 
         struct ModuleRaw { float speed; float angle; std::string steer_name; std::string wheel_name; };
+        // std::vector<ModuleRaw> modules = {
+        //     {state.speed1, state.angle1, "front_left_steering_joint",  "front_left_wheel_joint"},
+        //     {state.speed2, state.angle2, "rear_left_steering_joint",   "rear_left_wheel_joint"},
+        //     {state.speed3, state.angle3, "front_right_steering_joint", "front_right_wheel_joint"},
+        //     {state.speed4, state.angle4, "rear_right_steering_joint",  "rear_right_wheel_joint"},
+        // };
         std::vector<ModuleRaw> modules = {
             {state.speed1, state.angle1, "front_left_steering_joint",  "front_left_wheel_joint"},
             {state.speed2, state.angle2, "front_right_steering_joint", "front_right_wheel_joint"},

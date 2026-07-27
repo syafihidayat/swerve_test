@@ -20,3 +20,8 @@ steering_pid_controller:
       front_left_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
       rear_right_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
       rear_left_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
+
+      # front_right_steering_joint: {p: 1.0, i: 0.0, d: 0.0}
+      # front_left_steering_joint: {p: 1.0, i: 0.0, d: 0.0}
+      # rear_right_steering_joint: {p: 1.0, i: 0.0, d: 0.0}
+      # rear_left_steering_joint: {p: 1.0, i: 0.0, d: 0.0}

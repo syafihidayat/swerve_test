@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-    <xacro:macro name="wheel_trans_v0" params="prefix">
+    <!-- <xacro:macro name="wheel_trans_v0" params="prefix">
         <ros2_control name="${prefix}_wheel_system" type="system">
             <hardware>
                 <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -11,8 +11,8 @@
                 <state_interface name="velocity"/>
             </joint>
         </ros2_control>
-    </xacro:macro>
-    <!-- <xacro:macro name="wheel_trans_v0" params="prefix">
+    </xacro:macro> -->
+    <xacro:macro name="wheel_trans_v0" params="prefix">
         <ros2_control name="${prefix}_wheel_system" type="system">
             <hardware>
                 <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -23,5 +23,5 @@
                 <state_interface name="velocity"/>
             </joint>
         </ros2_control>
-    </xacro:macro> -->
+    </xacro:macro>
 </robot>

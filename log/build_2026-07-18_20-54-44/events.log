@@ -1,0 +1,230 @@
+[0.000000] (-) TimerEvent: {}
+[0.000523] (-) JobUnselected: {'identifier': 'swerve_bringup'}
+[0.000606] (-) JobUnselected: {'identifier': 'swerve_controller'}
+[0.000646] (-) JobUnselected: {'identifier': 'swerve_description'}
+[0.000682] (swerve_control) JobQueued: {'identifier': 'swerve_control', 'dependencies': OrderedDict()}
+[0.000966] (swerve_control) JobStarted: {'identifier': 'swerve_control'}
+[0.010595] (swerve_control) JobProgress: {'identifier': 'swerve_control', 'progress': 'cmake'}
+[0.011538] (swerve_control) Command: {'cmd': ['/usr/bin/cmake', '/home/syafihidayat/swerve_test/src/swerve_control', '-DCMAKE_INSTALL_PREFIX=/home/syafihidayat/swerve_test/install/swerve_control'], 'cwd': '/home/syafihidayat/swerve_test/build/swerve_control', 'env': OrderedDict([('LINOROBOT2_BASE', '2wd'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'syafihidayat'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/syafihidayat/microros_ws/install/micro_ros_agent/lib:/home/syafihidayat/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/syafihidayat'), ('OLDPWD', '/home/syafihidayat'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '60237'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/syafihidayat/swerve_test/install:/home/syafihidayat/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'syafihidayat'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'syafihidayat'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/home/syafihidayat/swerve_test/install/swerve_description/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/syafihidayat/.local/bin:/opt/ros/humble/bin:/home/syafihidayat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/syafihidayat:@/tmp/.ICE-unix/60208,unix/syafihidayat:/tmp/.ICE-unix/60208'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bdf0e908_bc40_4650_9f27_a76039d04e99'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.OEWHS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.391'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/syafihidayat/swerve_test/build/swerve_control'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/syafihidayat/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[0.099380] (-) TimerEvent: {}
+[0.154587] (swerve_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199559] (-) TimerEvent: {}
+[0.295383] (swerve_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.299782] (-) TimerEvent: {}
+[0.311272] (swerve_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399947] (-) TimerEvent: {}
+[0.430346] (swerve_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.439377] (swerve_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.439949] (swerve_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.440189] (swerve_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.444070] (swerve_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500081] (-) TimerEvent: {}
+[0.549595] (swerve_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.558345] (swerve_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.558804] (swerve_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.559149] (swerve_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.563350] (swerve_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600247] (-) TimerEvent: {}
+[0.700684] (-) TimerEvent: {}
+[0.736360] (swerve_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.800842] (-) TimerEvent: {}
+[0.866304] (swerve_control) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.900989] (-) TimerEvent: {}
+[0.944582] (swerve_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.956547] (swerve_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.975035] (swerve_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.995205] (swerve_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.001095] (-) TimerEvent: {}
+[1.019301] (swerve_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.089806] (swerve_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.095266] (swerve_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101287] (-) TimerEvent: {}
+[1.201679] (-) TimerEvent: {}
+[1.286555] (swerve_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.301841] (-) TimerEvent: {}
+[1.343606] (swerve_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.402005] (-) TimerEvent: {}
+[1.407547] (swerve_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.429600] (swerve_control) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.502142] (-) TimerEvent: {}
+[1.534954] (swerve_control) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.535438] (swerve_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.602297] (-) TimerEvent: {}
+[1.641266] (swerve_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.642582] (swerve_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.702460] (-) TimerEvent: {}
+[1.734902] (swerve_control) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.758707] (swerve_control) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.784976] (swerve_control) StdoutLine: {'line': b'-- Found control_msgs: 4.9.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[1.802645] (-) TimerEvent: {}
+[1.903050] (-) TimerEvent: {}
+[2.003422] (-) TimerEvent: {}
+[2.007321] (swerve_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.022885] (swerve_control) StdoutLine: {'line': b'-- Generating done\n'}
+[2.028926] (swerve_control) StdoutLine: {'line': b'-- Build files have been written to: /home/syafihidayat/swerve_test/build/swerve_control\n'}
+[2.044197] (swerve_control) CommandEnded: {'returncode': 0}
+[2.047568] (swerve_control) JobProgress: {'identifier': 'swerve_control', 'progress': 'build'}
+[2.047963] (swerve_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/syafihidayat/swerve_test/build/swerve_control', '--', '-j16', '-l16'], 'cwd': '/home/syafihidayat/swerve_test/build/swerve_control', 'env': OrderedDict([('LINOROBOT2_BASE', '2wd'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'syafihidayat'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/syafihidayat/microros_ws/install/micro_ros_agent/lib:/home/syafihidayat/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/syafihidayat'), ('OLDPWD', '/home/syafihidayat'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '60237'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/syafihidayat/swerve_test/install:/home/syafihidayat/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'syafihidayat'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'syafihidayat'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/home/syafihidayat/swerve_test/install/swerve_description/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/syafihidayat/.local/bin:/opt/ros/humble/bin:/home/syafihidayat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/syafihidayat:@/tmp/.ICE-unix/60208,unix/syafihidayat:/tmp/.ICE-unix/60208'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bdf0e908_bc40_4650_9f27_a76039d04e99'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.OEWHS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.391'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/syafihidayat/swerve_test/build/swerve_control'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/syafihidayat/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[2.103587] (-) TimerEvent: {}
+[2.121645] (swerve_control) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/kinematic_node.dir/src/kinematic_node.cpp.o\x1b[0m\n'}
+[2.121973] (swerve_control) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/kinematic_node.dir/src/kinematic.cpp.o\x1b[0m\n'}
+[2.203769] (-) TimerEvent: {}
+[2.304308] (-) TimerEvent: {}
+[2.404783] (-) TimerEvent: {}
+[2.505488] (-) TimerEvent: {}
+[2.605950] (-) TimerEvent: {}
+[2.706434] (-) TimerEvent: {}
+[2.806881] (-) TimerEvent: {}
+[2.907245] (-) TimerEvent: {}
+[3.007777] (-) TimerEvent: {}
+[3.108277] (-) TimerEvent: {}
+[3.208774] (-) TimerEvent: {}
+[3.309250] (-) TimerEvent: {}
+[3.409689] (-) TimerEvent: {}
+[3.510145] (-) TimerEvent: {}
+[3.610651] (-) TimerEvent: {}
+[3.711111] (-) TimerEvent: {}
+[3.811607] (-) TimerEvent: {}
+[3.912081] (-) TimerEvent: {}
+[4.012580] (-) TimerEvent: {}
+[4.113033] (-) TimerEvent: {}
+[4.213516] (-) TimerEvent: {}
+[4.313996] (-) TimerEvent: {}
+[4.414499] (-) TimerEvent: {}
+[4.514969] (-) TimerEvent: {}
+[4.615464] (-) TimerEvent: {}
+[4.715912] (-) TimerEvent: {}
+[4.816374] (-) TimerEvent: {}
+[4.916844] (-) TimerEvent: {}
+[5.017324] (-) TimerEvent: {}
+[5.117841] (-) TimerEvent: {}
+[5.218451] (-) TimerEvent: {}
+[5.318920] (-) TimerEvent: {}
+[5.419393] (-) TimerEvent: {}
+[5.519845] (-) TimerEvent: {}
+[5.620273] (-) TimerEvent: {}
+[5.720735] (-) TimerEvent: {}
+[5.821215] (-) TimerEvent: {}
+[5.921649] (-) TimerEvent: {}
+[6.022018] (-) TimerEvent: {}
+[6.122490] (-) TimerEvent: {}
+[6.222981] (-) TimerEvent: {}
+[6.323475] (-) TimerEvent: {}
+[6.423937] (-) TimerEvent: {}
+[6.524422] (-) TimerEvent: {}
+[6.624882] (-) TimerEvent: {}
+[6.725379] (-) TimerEvent: {}
+[6.825876] (-) TimerEvent: {}
+[6.926329] (-) TimerEvent: {}
+[7.026786] (-) TimerEvent: {}
+[7.127432] (-) TimerEvent: {}
+[7.227935] (-) TimerEvent: {}
+[7.328361] (-) TimerEvent: {}
+[7.428785] (-) TimerEvent: {}
+[7.529259] (-) TimerEvent: {}
+[7.629708] (-) TimerEvent: {}
+[7.730149] (-) TimerEvent: {}
+[7.830617] (-) TimerEvent: {}
+[7.931067] (-) TimerEvent: {}
+[8.031543] (-) TimerEvent: {}
+[8.132018] (-) TimerEvent: {}
+[8.232518] (-) TimerEvent: {}
+[8.332995] (-) TimerEvent: {}
+[8.433479] (-) TimerEvent: {}
+[8.533973] (-) TimerEvent: {}
+[8.634480] (-) TimerEvent: {}
+[8.734932] (-) TimerEvent: {}
+[8.835440] (-) TimerEvent: {}
+[8.935930] (-) TimerEvent: {}
+[9.036400] (-) TimerEvent: {}
+[9.136846] (-) TimerEvent: {}
+[9.237303] (-) TimerEvent: {}
+[9.337754] (-) TimerEvent: {}
+[9.438210] (-) TimerEvent: {}
+[9.538670] (-) TimerEvent: {}
+[9.639446] (-) TimerEvent: {}
+[9.739922] (-) TimerEvent: {}
+[9.840443] (-) TimerEvent: {}
+[9.941109] (-) TimerEvent: {}
+[10.041723] (-) TimerEvent: {}
+[10.142526] (-) TimerEvent: {}
+[10.243002] (-) TimerEvent: {}
+[10.343484] (-) TimerEvent: {}
+[10.443963] (-) TimerEvent: {}
+[10.544483] (-) TimerEvent: {}
+[10.644932] (-) TimerEvent: {}
+[10.745438] (-) TimerEvent: {}
+[10.845902] (-) TimerEvent: {}
+[10.946355] (-) TimerEvent: {}
+[11.046709] (-) TimerEvent: {}
+[11.147129] (-) TimerEvent: {}
+[11.247591] (-) TimerEvent: {}
+[11.348018] (-) TimerEvent: {}
+[11.448473] (-) TimerEvent: {}
+[11.548947] (-) TimerEvent: {}
+[11.649434] (-) TimerEvent: {}
+[11.749860] (-) TimerEvent: {}
+[11.850225] (-) TimerEvent: {}
+[11.950668] (-) TimerEvent: {}
+[12.051114] (-) TimerEvent: {}
+[12.151590] (-) TimerEvent: {}
+[12.252041] (-) TimerEvent: {}
+[12.352493] (-) TimerEvent: {}
+[12.452910] (-) TimerEvent: {}
+[12.553395] (-) TimerEvent: {}
+[12.653844] (-) TimerEvent: {}
+[12.754300] (-) TimerEvent: {}
+[12.854779] (-) TimerEvent: {}
+[12.955261] (-) TimerEvent: {}
+[13.055710] (-) TimerEvent: {}
+[13.156165] (-) TimerEvent: {}
+[13.256637] (-) TimerEvent: {}
+[13.357073] (-) TimerEvent: {}
+[13.457507] (-) TimerEvent: {}
+[13.557978] (-) TimerEvent: {}
+[13.658494] (-) TimerEvent: {}
+[13.758973] (-) TimerEvent: {}
+[13.859711] (-) TimerEvent: {}
+[13.960128] (-) TimerEvent: {}
+[13.973620] (swerve_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable kinematic_node\x1b[0m\n'}
+[14.060298] (-) TimerEvent: {}
+[14.160867] (-) TimerEvent: {}
+[14.261466] (-) TimerEvent: {}
+[14.362128] (-) TimerEvent: {}
+[14.462721] (-) TimerEvent: {}
+[14.563310] (-) TimerEvent: {}
+[14.663917] (-) TimerEvent: {}
+[14.764489] (-) TimerEvent: {}
+[14.864937] (-) TimerEvent: {}
+[14.965416] (-) TimerEvent: {}
+[15.065953] (-) TimerEvent: {}
+[15.083294] (swerve_control) StdoutLine: {'line': b'[100%] Built target kinematic_node\n'}
+[15.115760] (swerve_control) CommandEnded: {'returncode': 0}
+[15.117139] (swerve_control) JobProgress: {'identifier': 'swerve_control', 'progress': 'install'}
+[15.142207] (swerve_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/syafihidayat/swerve_test/build/swerve_control'], 'cwd': '/home/syafihidayat/swerve_test/build/swerve_control', 'env': OrderedDict([('LINOROBOT2_BASE', '2wd'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'syafihidayat'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/syafihidayat/microros_ws/install/micro_ros_agent/lib:/home/syafihidayat/microros_ws/install/micro_ros_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/syafihidayat'), ('OLDPWD', '/home/syafihidayat'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '60237'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/syafihidayat/swerve_test/install:/home/syafihidayat/microros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'syafihidayat'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'syafihidayat'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/home/syafihidayat/swerve_test/install/swerve_description/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/syafihidayat/.local/bin:/opt/ros/humble/bin:/home/syafihidayat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/syafihidayat:@/tmp/.ICE-unix/60208,unix/syafihidayat:/tmp/.ICE-unix/60208'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bdf0e908_bc40_4650_9f27_a76039d04e99'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LD_PRELOAD', ''), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.OEWHS3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.391'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/syafihidayat/swerve_test/build/swerve_control'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/syafihidayat/microros_ws/install/micro_ros_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('LC_PAPER', 'id_ID.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble')]), 'shell': False}
+[15.161217] (swerve_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.161801] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/lib/swerve_control/kinematic_node\n'}
+[15.166079] (-) TimerEvent: {}
+[15.177834] (swerve_control) StdoutLine: {'line': b'-- Set runtime path of "/home/syafihidayat/swerve_test/install/swerve_control/lib/swerve_control/kinematic_node" to ""\n'}
+[15.178139] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/launch\n'}
+[15.178454] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/launch/joystick.launch.py\n'}
+[15.179317] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/config\n'}
+[15.179727] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/config/joystick.yaml\n'}
+[15.180994] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/package_run_dependencies/swerve_control\n'}
+[15.181618] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/parent_prefix_path/swerve_control\n'}
+[15.182190] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.sh\n'}
+[15.182606] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.dsv\n'}
+[15.183021] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.sh\n'}
+[15.183587] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.dsv\n'}
+[15.184048] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.bash\n'}
+[15.184481] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.sh\n'}
+[15.184911] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.zsh\n'}
+[15.185315] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.dsv\n'}
+[15.185735] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.dsv\n'}
+[15.186268] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/packages/swerve_control\n'}
+[15.186799] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig.cmake\n'}
+[15.187102] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig-version.cmake\n'}
+[15.187554] (swerve_control) StdoutLine: {'line': b'-- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.xml\n'}
+[15.192851] (swerve_control) CommandEnded: {'returncode': 0}
+[15.229916] (swerve_control) JobEnded: {'identifier': 'swerve_control', 'rc': 0}
+[15.231234] (-) EventReactorShutdown: {}

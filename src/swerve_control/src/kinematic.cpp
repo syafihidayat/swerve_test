@@ -36,8 +36,15 @@ Kinematic::Kinematic(base robot_base, int motor_max_rpm, float max_rpm_ratio,
 // ============================================================
 Kinematic::module_state Kinematic::calculateModuleStates(float linear_x, float linear_y, float angular_z)
 {
-    float rx[4] = { +half_width_, -half_width_, +half_width_, -half_width_ };
-    float ry[4] = { +half_length_, +half_length_, -half_length_, -half_length_ };
+    // rx = offset longitudinal (depan-belakang, sumbu X) tiap module
+    // ry = offset lateral (kiri-kanan, sumbu Y) tiap module
+    // Urutan module: 1=FL, 2=FR, 3=BL, 4=BR (lihat komentar layout di atas)
+    // PENTING: sebelumnya array ini tertukar (rx diisi half_width_, ry diisi
+    // half_length_), menyebabkan sudut steering salah 180 derajat pada module
+    // Front Right & Rear Left saat rotasi murni (robot jadi "roda saling
+    // bertolak" dan rotasi lambat/lemah).
+    float rx[4] = { +half_length_, +half_length_, -half_length_, -half_length_ };
+    float ry[4] = { +half_width_, -half_width_, +half_width_, -half_width_ };
 
     float vix[4], viy[4], speed_mps[4], angle[4];
 

@@ -1,9 +1,34 @@
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 50
+#     wheel_pid_controller:
+#       type: pid_controller/PidController
+
+# wheel_pid_controller:
+#   ros__parameters:
+#     dof_names:
+#       - front_right_wheel_joint
+#       - front_left_wheel_joint
+#       - rear_right_wheel_joint
+#       - rear_left_wheel_joint
+#     # command_interface: velocity
+#     command_interface: effort
+
+#     reference_and_state_interfaces: [velocity]
+#     gains:
+
+#       front_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+#       front_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+#       rear_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+#       rear_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+
+
+
 controller_manager:
   ros__parameters:
     update_rate: 50
     wheel_pid_controller:
       type: pid_controller/PidController
-
 wheel_pid_controller:
   ros__parameters:
     dof_names:
@@ -11,10 +36,21 @@ wheel_pid_controller:
       - front_left_wheel_joint
       - rear_right_wheel_joint
       - rear_left_wheel_joint
-    command_interface: effort
+    # Ganti dari 'effort' ke 'velocity' -- state yang dikontrol memang velocity,
+    # jadi command yang dikirim juga harus velocity langsung (bukan torsi/effort).
+    # Ini jauh lebih stabil dan tidak butuh gain PID sebesar sebelumnya.
+    command_interface: velocity
     reference_and_state_interfaces: [velocity]
     gains:
-      front_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
-      front_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
-      rear_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
-      rear_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+      # Gain awal yang jauh lebih kecil dan aman sebagai starting point.
+      # Silakan tuning naik sedikit-sedikit (mis. p: 1.0 -> 2.0 -> ...)
+      # sambil amati apakah masih stabil di /wheel_pid_controller/controller_state
+      front_right_wheel_joint: {p: 1.0, i: 0.0, d: 0.0}
+      front_left_wheel_joint: {p: 1.0, i: 0.0, d: 0.0}
+      rear_right_wheel_joint: {p: 1.0, i: 0.0, d: 0.0}
+      rear_left_wheel_joint: {p: 1.0, i: 0.0, d: 0.0}
+
+      # front_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+      # front_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+      # rear_right_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}
+      # rear_left_wheel_joint: {p: 50.0, i: 5.0, d: 0.5}

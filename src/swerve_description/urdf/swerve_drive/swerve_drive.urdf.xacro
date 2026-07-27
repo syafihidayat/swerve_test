@@ -52,7 +52,8 @@
             <parent link="${prefix}_steering_link"/>
             <child link="${prefix}_wheel_link"/>
             <xacro:insert_block name="joint_axis_w"/>
-            <limit velocity="15.0" effort="0.001" />
+            <limit velocity="15.0" effort="1.0" />
+            <!-- <limit velocity="15.0" effort="0.001" /> -->
             <dynamics damping="0"/>
         </joint>
 
@@ -69,6 +70,7 @@
                 <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
                 <geometry>
                     <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+                    <!-- <cylinder radius="${wheel_radius}" length="${wheel_length}"/> -->
                 </geometry>
             </collision>
             <inertial>
