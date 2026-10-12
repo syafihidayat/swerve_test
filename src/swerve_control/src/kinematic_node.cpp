@@ -25,7 +25,11 @@ public:
                             "rear_right_wheel_joint", "rear_left_wheel_joint"};
 
         for (const auto &name : steering_names_)
+        {
             current_steering_angle_[name] = 0.0f;
+            // ---- Fix #2: simpan last commanded angle terpisah dari encoder feedback ----
+            last_commanded_angle_[name] = 0.0f;
+        }
 
         cmd_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
             "/cmd_vel", 10, std::bind(&KinematicNode::cmdVelCallback, this, _1));
@@ -45,6 +49,8 @@ public:
 private:
     void jointStateCallback(const sensor_msgs::msg::JointState::SharedPtr msg)
     {
+        // encoder feedback ini sekarang HANYA dipakai untuk monitoring/odometry,
+        // bukan lagi sebagai basis keputusan optimizeModule (lihat fix #2)
         for (size_t i = 0; i < msg->name.size(); i++)
         {
             auto it = current_steering_angle_.find(msg->name[i]);
@@ -62,12 +68,7 @@ private:
         Kinematic::module_state state = kinematic_.getModuleStates(vx, vy, wz);
 
         struct ModuleRaw { float speed; float angle; std::string steer_name; std::string wheel_name; };
-        // std::vector<ModuleRaw> modules = {
-        //     {state.speed1, state.angle1, "front_left_steering_joint",  "front_left_wheel_joint"},
-        //     {state.speed2, state.angle2, "rear_left_steering_joint",   "rear_left_wheel_joint"},
-        //     {state.speed3, state.angle3, "front_right_steering_joint", "front_right_wheel_joint"},
-        //     {state.speed4, state.angle4, "rear_right_steering_joint",  "rear_right_wheel_joint"},
-        // };
+
         std::vector<ModuleRaw> modules = {
             {state.speed1, state.angle1, "front_left_steering_joint",  "front_left_wheel_joint"},
             {state.speed2, state.angle2, "front_right_steering_joint", "front_right_wheel_joint"},
@@ -78,14 +79,25 @@ private:
         std::map<std::string, float> out_speed_rps;
         std::map<std::string, float> out_angle_rad;
 
+        int module_index = 0;
         for (auto &m : modules)
         {
-            float current_angle = current_steering_angle_[m.steer_name];
+            // ---- Fix #2: basis optimize pakai last commanded angle, ----
+            // ---- bukan current_steering_angle_ (encoder feedback) ----
+            // Alasan: encoder feedback tiap motor punya lag berbeda-beda,
+            // sehingga keputusan flip antar module bisa tidak sinkron dan
+            // menyebabkan robot terasa "muter sendiri" saat transisi gerakan.
+            float base_angle = last_commanded_angle_[m.steer_name];
+
             float out_speed = 0.0f, out_angle = 0.0f;
-            kinematic_.optimizeModule(m.speed, m.angle, current_angle, out_speed, out_angle);
+            kinematic_.optimizeModule(m.speed, m.angle, base_angle, out_speed, out_angle, module_index);
 
             out_speed_rps[m.wheel_name] = out_speed;
             out_angle_rad[m.steer_name] = out_angle;
+
+            last_commanded_angle_[m.steer_name] = out_angle;
+
+            module_index++;
         }
 
         control_msgs::msg::MultiDOFCommand steering_msg;
@@ -107,7 +119,8 @@ private:
     Kinematic kinematic_;
     std::vector<std::string> steering_names_;
     std::vector<std::string> wheel_names_;
-    std::map<std::string, float> current_steering_angle_;
+    std::map<std::string, float> current_steering_angle_;   // encoder feedback (monitoring saja)
+    std::map<std::string, float> last_commanded_angle_;     // basis untuk optimizeModule (fix #2)
 
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_state_sub_;

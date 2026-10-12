@@ -22,11 +22,11 @@ Kinematic::Kinematic(base robot_base, int motor_max_rpm, float max_rpm_ratio,
 // INVERSE KINEMATICS
 // chassis speed (vx, vy, omega) -> module speed (rps) + angle (rad)
 //
-// Layout wheel (sama seperti versi Eigen sebelumnya):
-//   module 1 = Front Left  (rx=+half_width_, ry=+half_length_)
-//   module 2 = Front Right (rx=-half_width_, ry=+half_length_)
-//   module 3 = Back Left   (rx=+half_width_, ry=-half_length_)
-//   module 4 = Back Right  (rx=-half_width_, ry=-half_length_)
+// Layout wheel:
+//   module 1 = Front Left  (rx=+half_length_, ry=+half_width_)
+//   module 2 = Front Right (rx=+half_length_, ry=-half_width_)
+//   module 3 = Back Left   (rx=-half_length_, ry=+half_width_)
+//   module 4 = Back Right  (rx=-half_length_, ry=-half_width_)
 //
 // Rumus per module (persamaan 11.14):
 //   v_ix = vx - omega * ry
@@ -36,13 +36,6 @@ Kinematic::Kinematic(base robot_base, int motor_max_rpm, float max_rpm_ratio,
 // ============================================================
 Kinematic::module_state Kinematic::calculateModuleStates(float linear_x, float linear_y, float angular_z)
 {
-    // rx = offset longitudinal (depan-belakang, sumbu X) tiap module
-    // ry = offset lateral (kiri-kanan, sumbu Y) tiap module
-    // Urutan module: 1=FL, 2=FR, 3=BL, 4=BR (lihat komentar layout di atas)
-    // PENTING: sebelumnya array ini tertukar (rx diisi half_width_, ry diisi
-    // half_length_), menyebabkan sudut steering salah 180 derajat pada module
-    // Front Right & Rear Left saat rotasi murni (robot jadi "roda saling
-    // bertolak" dan rotasi lambat/lemah).
     float rx[4] = { +half_length_, +half_length_, -half_length_, -half_length_ };
     float ry[4] = { +half_width_, -half_width_, +half_width_, -half_width_ };
 
@@ -54,12 +47,25 @@ Kinematic::module_state Kinematic::calculateModuleStates(float linear_x, float l
         viy[i] = linear_y + angular_z * rx[i];
 
         speed_mps[i] = sqrt(vix[i] * vix[i] + viy[i] * viy[i]);
-        angle[i]     = atan2(viy[i], vix[i]);
+
+        // ---- Fix #1: deadband untuk angle saat speed sangat kecil ----
+        // Kalau speed module ini nyaris nol, atan2() sangat sensitif
+        // terhadap noise kecil dan bisa lompat drastis. Daripada ikut
+        // hasil atan2() yang liar, pertahankan angle terakhir yang valid.
+        if (speed_mps[i] > angle_deadband_speed_)
+        {
+            angle[i] = atan2(viy[i], vix[i]);
+            last_angle_[i] = angle[i];
+        }
+        else
+        {
+            angle[i] = last_angle_[i];
+            speed_mps[i] = 0.0f; // pastikan wheel juga benar-benar berhenti
+        }
     }
 
     Kinematic::module_state state;
 
-    // convert m/s wheel speed -> rps (revolutions per second), lalu batasi ke max_rps_
     state.speed1 = std::clamp(speed_mps[0] / wheel_circumference_, -max_rps_, max_rps_);
     state.angle1 = angle[0];
 
@@ -83,22 +89,12 @@ Kinematic::module_state Kinematic::getModuleStates(float linear_x, float linear_
 // ============================================================
 // FORWARD KINEMATICS
 // module speed (rps) + angle (rad) -> chassis speed (vx, vy, omega)
-//
-// Ini adalah versi closed-form dari M+ (pseudoinverse) di persamaan (11.17),
-// diturunkan khusus untuk layout wheel simetris persegi panjang di atas.
-// Karena kolom matriks M orthogonal untuk layout ini, pseudoinverse-nya
-// bisa disederhanakan jadi rata-rata + selisih (tanpa perlu invers matriks).
-//
-//   vx    = rata-rata semua v_ix
-//   vy    = rata-rata semua v_iy
-//   omega = rata-rata dari 2 estimasi (dari sumbu x dan sumbu y)
 // ============================================================
 Kinematic::velocities Kinematic::getVelocities(float speed1, float angle1,
                                                 float speed2, float angle2,
                                                 float speed3, float angle3,
                                                 float speed4, float angle4)
 {
-    // convert rps -> m/s, lalu pecah ke komponen x,y pakai angle steering
     float v1x = (speed1 * wheel_circumference_) * cos(angle1);
     float v1y = (speed1 * wheel_circumference_) * sin(angle1);
 
@@ -113,11 +109,9 @@ Kinematic::velocities Kinematic::getVelocities(float speed1, float angle1,
 
     Kinematic::velocities vel;
 
-    // vx, vy: rata-rata dari semua module (least-squares closed form)
     vel.linear_x = (v1x + v2x + v3x + v4x) / 4.0;
     vel.linear_y = (v1y + v2y + v3y + v4y) / 4.0;
 
-    // omega: 2 estimasi independen (dari selisih sumbu x dan sumbu y), dirata-rata
     float omega_from_x = ((v3x + v4x) - (v1x + v2x)) / (4.0 * half_length_);
     float omega_from_y = ((v1y + v3y) - (v2y + v4y)) / (4.0 * half_width_);
 
@@ -127,19 +121,37 @@ Kinematic::velocities Kinematic::getVelocities(float speed1, float angle1,
 }
 
 // ============================================================
-// Optimisasi steering (opsional, dipanggil per module sebelum kirim ke motor)
-// Kalau selisih sudut > 90 derajat, lebih cepat balik arah speed
-// daripada muter steering jauh-jauh.
+// Optimisasi steering (dipanggil per module sebelum kirim ke motor)
+// Kalau selisih sudut > 90 derajat (dengan hysteresis), lebih cepat
+// balik arah speed daripada muter steering jauh-jauh.
+//
+// module_index (0..3) dipakai untuk menyimpan status flip terakhir
+// per module secara terpisah -> mencegah chattering (fix #3).
 // ============================================================
 void Kinematic::optimizeModule(float desiredSpeed, float desiredAngle, float currentAngle,
-                                float &outSpeed, float &outAngle)
+                                float &outSpeed, float &outAngle, int module_index)
 {
     float delta = desiredAngle - currentAngle;
 
     while (delta > M_PI)  delta -= 2 * M_PI;
     while (delta < -M_PI) delta += 2 * M_PI;
 
-    if (fabs(delta) > M_PI / 2.0)
+    const float flip_threshold = M_PI / 2.0f;
+    const float hysteresis = toRad(5.0f); // margin 5 derajat, sesuaikan kalau perlu
+
+    bool should_flip;
+    if (last_flip_state_[module_index])
+    {
+        // sebelumnya sudah flip -> butuh delta lebih kecil dulu buat balik lagi
+        should_flip = fabs(delta) > (flip_threshold - hysteresis);
+    }
+    else
+    {
+        should_flip = fabs(delta) > (flip_threshold + hysteresis);
+    }
+    last_flip_state_[module_index] = should_flip;
+
+    if (should_flip)
     {
         outSpeed = -desiredSpeed;
         outAngle = currentAngle + delta - (delta > 0 ? M_PI : -M_PI);

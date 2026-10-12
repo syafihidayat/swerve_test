@@ -65,11 +65,13 @@ public:
                               float speed4, float angle4);
 
     // Optimisasi steering: minimalkan rotasi module (hindari muter >90 derajat)
-    // currentAngle -> sudut wheel sekarang (rad, dari encoder steering)
+    // currentAngle -> sudut wheel sekarang (rad, biasanya dari "last commanded angle",
+    //                 lihat catatan di kinematic_node.cpp)
     // desiredSpeed/desiredAngle -> target hasil inverse kinematics
     // outSpeed/outAngle -> hasil setelah optimisasi (referensi, diisi function ini)
+    // module_index -> 0..3, dipakai untuk menyimpan state hysteresis (fix #3) per module
     void optimizeModule(float desiredSpeed, float desiredAngle, float currentAngle,
-                         float &outSpeed, float &outAngle);
+                         float &outSpeed, float &outAngle, int module_index);
 
     float getMaxRPS();
     float toRad(float deg);
@@ -85,6 +87,17 @@ private:
     float wheelbase_width_;    // jarak kiri-kanan (total, bukan setengah)
     float half_length_;
     float half_width_;
+
+    // ---- Fix #1: deadband untuk angle saat speed sangat kecil ----
+    // simpan angle terakhir yang valid per module, supaya atan2() tidak
+    // "liar" saat vix/viy mendekati nol
+    float last_angle_[4] = {0.0f, 0.0f, 0.0f, 0.0f};
+    float angle_deadband_speed_ = 0.02f; // m/s, sesuaikan dengan robot kamu
+
+    // ---- Fix #3: hysteresis untuk keputusan flip 90 derajat ----
+    // simpan status flip terakhir per module supaya tidak chattering
+    // saat delta angle goyang di sekitar threshold 90 derajat
+    bool last_flip_state_[4] = {false, false, false, false};
 };
 
 #endif

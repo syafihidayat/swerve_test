@@ -1,0 +1,151 @@
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+   93 |     [01;31m[Kfor[m[K (int i = 0; i < 4; i++)
+      |     [01;31m[K^~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+   93 |     for (int i = 0; [01;31m[Ki[m[K < 4; i++)
+      |                     [01;31m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+   93 |     for (int i = 0; i < 4; [01;31m[Ki[m[K++)
+      |                            [01;31m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:109:6:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+  109 |     }[01;35m[K;[m[K
+      |      [01;35m[K^[m[K
+      |      [31m[K-[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:6:1:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KKinematic[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+    6 | [01;31m[KKinematic[m[K::Kinematic(base robot_base, int motor_max_rpm, float max_rpm_ratio,
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:6:1:[m[K [01;31m[Kerror: [m[K‘[01m[KKinematic::Kinematic(Kinematic::base, int, float, float, float, float, float, float)[m[K’ cannot be overloaded with ‘[01m[KKinematic::Kinematic(Kinematic::base, int, float, float, float, float, float, float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:53:5:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KKinematic::Kinematic(Kinematic::base, int, float, float, float, float, float, float)[m[K’
+   53 |     [01;36m[KKinematic[m[K(base robot_base, int motor_max_rpm, float max_rpm_ratio,
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:37:25:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KcalculateModuleStates[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   37 | Kinematic::module_state [01;31m[KKinematic[m[K::calculateModuleStates(float linear_x, float linear_y, float angular_z)
+      |                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:37:25:[m[K [01;31m[Kerror: [m[K‘[01m[KKinematic::module_state Kinematic::calculateModuleStates(float, float, float)[m[K’ cannot be overloaded with ‘[01m[KKinematic::module_state Kinematic::calculateModuleStates(float, float, float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:79:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KKinematic::module_state Kinematic::calculateModuleStates(float, float, float)[m[K’
+   79 |     module_state [01;36m[KcalculateModuleStates[m[K(float linear_x, float linear_y, float angular_z);
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:78:25:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KgetModuleStates[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   78 | Kinematic::module_state [01;31m[KKinematic[m[K::getModuleStates(float linear_x, float linear_y, float angular_z)
+      |                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:78:25:[m[K [01;31m[Kerror: [m[K‘[01m[KKinematic::module_state Kinematic::getModuleStates(float, float, float)[m[K’ cannot be overloaded with ‘[01m[KKinematic::module_state Kinematic::getModuleStates(float, float, float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:58:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KKinematic::module_state Kinematic::getModuleStates(float, float, float)[m[K’
+   58 |     module_state [01;36m[KgetModuleStates[m[K(float linear_x, float linear_y, float angular_z);
+      |                  [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:96:23:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KgetVelocities[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   96 | Kinematic::velocities [01;31m[KKinematic[m[K::getVelocities(float speed1, float angle1,
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:96:23:[m[K [01;31m[Kerror: [m[K‘[01m[KKinematic::velocities Kinematic::getVelocities(float, float, float, float, float, float, float, float)[m[K’ cannot be overloaded with ‘[01m[KKinematic::velocities Kinematic::getVelocities(float, float, float, float, float, float, float, float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:62:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KKinematic::velocities Kinematic::getVelocities(float, float, float, float, float, float, float, float)[m[K’
+   62 |     velocities [01;36m[KgetVelocities[m[K(float speed1, float angle1,
+      |                [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:156:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KoptimizeModule[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  156 | void [01;31m[KKinematic[m[K::optimizeModule(float desiredSpeed, float desiredAngle, float currentAngle,
+      |      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:156:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’ cannot be overloaded with ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:71:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’
+   71 |     void [01;36m[KoptimizeModule[m[K(float desiredSpeed, float desiredAngle, float currentAngle,
+      |          [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:192:7:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KgetMaxRPS[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  192 | float [01;31m[KKinematic[m[K::getMaxRPS()
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:192:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloat Kinematic::getMaxRPS()[m[K’ cannot be overloaded with ‘[01m[Kfloat Kinematic::getMaxRPS()[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:74:11:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat Kinematic::getMaxRPS()[m[K’
+   74 |     float [01;36m[KgetMaxRPS[m[K();
+      |           [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:197:7:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KtoRad[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  197 | float [01;31m[KKinematic[m[K::toRad(float deg)
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:197:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloat Kinematic::toRad(float)[m[K’ cannot be overloaded with ‘[01m[Kfloat Kinematic::toRad(float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:75:11:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat Kinematic::toRad(float)[m[K’
+   75 |     float [01;36m[KtoRad[m[K(float deg);
+      |           [01;36m[K^~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:202:7:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KKinematic::[m[K’ on member ‘[01m[KtoDeg[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  202 | float [01;31m[KKinematic[m[K::toDeg(float rad)
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:202:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kfloat Kinematic::toDeg(float)[m[K’ cannot be overloaded with ‘[01m[Kfloat Kinematic::toDeg(float)[m[K’
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:76:11:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat Kinematic::toDeg(float)[m[K’
+   76 |     float [01;36m[KtoDeg[m[K(float rad);
+      |           [01;36m[K^~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:205:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  205 | }
+      |  [01;31m[K^[m[K
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:1[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:15:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   15 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:[m[K In member function ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:169:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_flip_state_[m[K’ was not declared in this scope
+  169 |     if ([01;31m[Klast_flip_state_[m[K)
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:178:5:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_flip_state_[m[K’ was not declared in this scope
+  178 |     [01;31m[Klast_flip_state_[m[K = should_flip;
+      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:[m[K At global scope:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:205:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  205 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/kinematic_node.dir/build.make:90: CMakeFiles/kinematic_node.dir/src/kinematic.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:5[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+   93 |     [01;31m[Kfor[m[K (int i = 0; i < 4; i++)
+      |     [01;31m[K^~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+   93 |     for (int i = 0; [01;31m[Ki[m[K < 4; i++)
+      |                     [01;31m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:93:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+   93 |     for (int i = 0; i < 4; [01;31m[Ki[m[K++)
+      |                            [01;31m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:109:6:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+  109 |     }[01;35m[K;[m[K
+      |      [01;35m[K^[m[K
+      |      [31m[K-[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:11:26:[m[K [01;31m[Kerror: [m[Kusing-declaration for non-member at class scope
+   11 | using std::placeholders::[01;31m[K_1[m[K;
+      |                          [01;31m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:117:15:[m[K [01;31m[Kerror: [m[Kfield ‘[01m[Kkinematic_[m[K’ has incomplete type ‘[01m[KKinematic[m[K’
+  117 |     Kinematic [01;31m[Kkinematic_[m[K;
+      |               [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:5[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:14:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Kinematic[m[K’
+   14 | class [01;36m[KKinematic[m[K
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:135:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  135 | }
+      |  [01;31m[K^[m[K
+In file included from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:5[m[K:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/include/swerve_control/kinematic.h:15:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   15 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:[m[K In constructor ‘[01m[KKinematic::KinematicNode::KinematicNode()[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:31:77:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+   31 |   "/cmd_vel", 10, std::bind(&KinematicNode::cmdVelCallback, this, [01;31m[K_1[m[K));
+      |                                                                   [01;31m[K^~[m[K
+      |                                                                   [32m[Kstd::placeholders::_1[m[K
+In file included from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:1[m[K:
+[01m[K/usr/include/c++/11/functional:225:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+  225 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+      |                                  [01;36m[K^~[m[K
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:[m[K At global scope:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:135:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  135 | }
+      |  [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/kinematic_node.dir/build.make:76: CMakeFiles/kinematic_node.dir/src/kinematic_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kinematic_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
