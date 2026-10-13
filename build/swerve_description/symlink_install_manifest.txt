@@ -4,6 +4,7 @@
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/base/base.urdf.xacro
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/color_palette.xacro
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/common.xacro
+/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/swerve_drive/lidar.xacro
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/swerve_drive/steering.transmission.xacro
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/swerve_drive/swerve_drive.gazebo.xacro
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/urdf/swerve_drive/swerve_drive.urdf.xacro
@@ -17,6 +18,7 @@
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/meshes/stl/wheel.STL
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/config/controller_steering.yaml
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/config/controller_wheel.yaml
+/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/worlds/maze.world
 /home/syafihidayat/swerve_test/install/swerve_description/share/ament_index/resource_index/package_run_dependencies/swerve_description
 /home/syafihidayat/swerve_test/install/swerve_description/share/ament_index/resource_index/parent_prefix_path/swerve_description
 /home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/environment/ament_prefix_path.sh

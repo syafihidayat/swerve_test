@@ -1,0 +1,331 @@
+[0.333s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.333s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x731323782320>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73132386bf10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73132386bf10>>)
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.605s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.605s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/syafihidayat/swerve_test'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.651s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extension 'ignore'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extension 'ignore_ament_install'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extensions ['colcon_pkg']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extension 'colcon_pkg'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extensions ['colcon_meta']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extension 'colcon_meta'
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extensions ['ros']
+[0.653s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_bringup) by extension 'ros'
+[0.656s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swerve_bringup' with type 'ros.ament_cmake' and name 'swerve_bringup'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extensions ['ignore', 'ignore_ament_install']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extension 'ignore'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extension 'ignore_ament_install'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extensions ['colcon_pkg']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extension 'colcon_pkg'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extensions ['colcon_meta']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extension 'colcon_meta'
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extensions ['ros']
+[0.656s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_control) by extension 'ros'
+[0.657s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swerve_control' with type 'ros.ament_cmake' and name 'swerve_control'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extension 'ignore'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extensions ['colcon_pkg']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extension 'colcon_pkg'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extensions ['colcon_meta']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extensions ['ros']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_controller) by extension 'ros'
+[0.659s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swerve_controller' with type 'ros.ament_cmake' and name 'swerve_controller'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extensions ['ignore', 'ignore_ament_install']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extension 'ignore'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extension 'ignore_ament_install'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extensions ['colcon_pkg']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extension 'colcon_pkg'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extensions ['colcon_meta']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extension 'colcon_meta'
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extensions ['ros']
+[0.659s] Level 1:colcon.colcon_core.package_identification:_identify(src/swerve_description) by extension 'ros'
+[0.660s] DEBUG:colcon.colcon_core.package_identification:Package 'src/swerve_description' with type 'ros.ament_cmake' and name 'swerve_description'
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.660s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.684s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.684s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.692s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/syafihidayat/swerve_test/install
+[0.695s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/syafihidayat/microros_ws/install
+[0.699s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/syafihidayat/Documents/ros2_lidar/install
+[0.701s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 401 installed packages in /opt/ros/humble
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_target' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.796s] DEBUG:colcon.colcon_core.verb:Building package 'swerve_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/syafihidayat/swerve_test/build/swerve_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/syafihidayat/swerve_test/install/swerve_control', 'merge_install': False, 'path': '/home/syafihidayat/swerve_test/src/swerve_control', 'symlink_install': False, 'test_result_base': None}
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_target' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.796s] DEBUG:colcon.colcon_core.verb:Building package 'swerve_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/syafihidayat/swerve_test/build/swerve_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/syafihidayat/swerve_test/install/swerve_controller', 'merge_install': False, 'path': '/home/syafihidayat/swerve_test/src/swerve_controller', 'symlink_install': False, 'test_result_base': None}
+[0.796s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_target' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.797s] DEBUG:colcon.colcon_core.verb:Building package 'swerve_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/syafihidayat/swerve_test/build/swerve_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/syafihidayat/swerve_test/install/swerve_description', 'merge_install': False, 'path': '/home/syafihidayat/swerve_test/src/swerve_description', 'symlink_install': False, 'test_result_base': None}
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_target' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.797s] Level 5:colcon.colcon_core.verb:set package 'swerve_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.797s] DEBUG:colcon.colcon_core.verb:Building package 'swerve_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/syafihidayat/swerve_test/build/swerve_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/syafihidayat/swerve_test/install/swerve_bringup', 'merge_install': False, 'path': '/home/syafihidayat/swerve_test/src/swerve_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.797s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.798s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.798s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/syafihidayat/swerve_test/src/swerve_controller' with build type 'ament_cmake'
+[0.798s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/syafihidayat/swerve_test/src/swerve_controller'
+[0.803s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.803s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.803s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.808s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/syafihidayat/swerve_test/src/swerve_description' with build type 'ament_cmake'
+[0.808s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/syafihidayat/swerve_test/src/swerve_description'
+[0.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.813s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/syafihidayat/swerve_test/src/swerve_control' with build type 'ament_cmake'
+[0.813s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/syafihidayat/swerve_test/src/swerve_control'
+[0.813s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.813s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
+[0.829s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_description -- -j16 -l16
+[0.833s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_control -- -j16 -l16
+[0.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_description -- -j16 -l16
+[0.939s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_description
+[0.988s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_description)
+[0.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_description
+[0.994s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description' for CMake module files
+[0.995s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description' for CMake config files
+[0.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_description', 'cmake_prefix_path')
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.ps1'
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.dsv'
+[0.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.sh'
+[1.000s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/bin'
+[1.000s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/lib/pkgconfig/swerve_description.pc'
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/lib/python3.10/site-packages'
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/bin'
+[1.001s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.ps1'
+[1.004s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.dsv'
+[1.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.sh'
+[1.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.bash'
+[1.007s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.zsh'
+[1.009s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_description/share/colcon-core/packages/swerve_description)
+[1.010s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_description)
+[1.011s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description' for CMake module files
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description' for CMake config files
+[1.012s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_description', 'cmake_prefix_path')
+[1.012s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.ps1'
+[1.012s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.dsv'
+[1.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/hook/cmake_prefix_path.sh'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/bin'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/lib/pkgconfig/swerve_description.pc'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/lib/python3.10/site-packages'
+[1.014s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_description/bin'
+[1.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.ps1'
+[1.014s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.dsv'
+[1.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.sh'
+[1.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.bash'
+[1.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_description/share/swerve_description/package.zsh'
+[1.016s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_description/share/colcon-core/packages/swerve_description)
+[1.018s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_controller -- -j16 -l16
+[1.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_controller
+[1.020s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_control -- -j16 -l16
+[1.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_control
+[1.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_controller)
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller' for CMake module files
+[1.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_controller
+[1.037s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller' for CMake config files
+[1.037s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_controller', 'cmake_prefix_path')
+[1.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.ps1'
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.dsv'
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.sh'
+[1.039s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib'
+[1.039s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/bin'
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib/pkgconfig/swerve_controller.pc'
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib/python3.10/site-packages'
+[1.040s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/bin'
+[1.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.ps1'
+[1.041s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.dsv'
+[1.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.sh'
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.bash'
+[1.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.zsh'
+[1.044s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_controller/share/colcon-core/packages/swerve_controller)
+[1.045s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_controller)
+[1.045s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller' for CMake module files
+[1.046s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller' for CMake config files
+[1.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_controller', 'cmake_prefix_path')
+[1.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.ps1'
+[1.047s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.dsv'
+[1.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/hook/cmake_prefix_path.sh'
+[1.047s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib'
+[1.048s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/bin'
+[1.048s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib/pkgconfig/swerve_controller.pc'
+[1.048s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/lib/python3.10/site-packages'
+[1.048s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_controller/bin'
+[1.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.ps1'
+[1.049s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.dsv'
+[1.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.sh'
+[1.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.bash'
+[1.051s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_controller/share/swerve_controller/package.zsh'
+[1.051s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_controller/share/colcon-core/packages/swerve_controller)
+[1.052s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/syafihidayat/swerve_test/src/swerve_bringup' with build type 'ament_cmake'
+[1.052s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/syafihidayat/swerve_test/src/swerve_bringup'
+[1.052s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.053s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.058s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_control)
+[1.059s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control' for CMake module files
+[1.060s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_control
+[1.060s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control' for CMake config files
+[1.060s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_control', 'cmake_prefix_path')
+[1.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.ps1'
+[1.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.dsv'
+[1.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.sh'
+[1.062s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib'
+[1.062s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/bin'
+[1.062s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib/pkgconfig/swerve_control.pc'
+[1.062s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib/python3.10/site-packages'
+[1.063s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/bin'
+[1.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.ps1'
+[1.064s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.dsv'
+[1.064s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.sh'
+[1.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.bash'
+[1.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.zsh'
+[1.065s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_control/share/colcon-core/packages/swerve_control)
+[1.066s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_control)
+[1.066s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control' for CMake module files
+[1.067s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control' for CMake config files
+[1.067s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_control', 'cmake_prefix_path')
+[1.067s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.ps1'
+[1.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.dsv'
+[1.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/hook/cmake_prefix_path.sh'
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib'
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/bin'
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib/pkgconfig/swerve_control.pc'
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/lib/python3.10/site-packages'
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_control/bin'
+[1.069s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.ps1'
+[1.069s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.dsv'
+[1.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.sh'
+[1.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.bash'
+[1.070s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.zsh'
+[1.071s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_control/share/colcon-core/packages/swerve_control)
+[1.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_bringup': CMAKE_PREFIX_PATH=/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/Documents/ros2_lidar/install/sllidar_ros2:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_bringup -- -j16 -l16
+[1.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_bringup' returned '0': CMAKE_PREFIX_PATH=/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/Documents/ros2_lidar/install/sllidar_ros2:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_bringup -- -j16 -l16
+[1.127s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/syafihidayat/swerve_test/build/swerve_bringup': CMAKE_PREFIX_PATH=/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/Documents/ros2_lidar/install/sllidar_ros2:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_bringup
+[1.137s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_bringup)
+[1.137s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup' for CMake module files
+[1.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/syafihidayat/swerve_test/build/swerve_bringup' returned '0': CMAKE_PREFIX_PATH=/home/syafihidayat/swerve_test/install/swerve_description:/home/syafihidayat/swerve_test/install/swerve_controller:/home/syafihidayat/swerve_test/install/swerve_bringup:/home/syafihidayat/swerve_test/install/swerve_control:/home/syafihidayat/Documents/ros2_lidar/install/sllidar_ros2:/home/syafihidayat/microros_ws/install/micro_ros_setup:/home/syafihidayat/microros_ws/install/micro_ros_agent:/home/syafihidayat/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_bringup
+[1.138s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup' for CMake config files
+[1.138s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_bringup', 'cmake_prefix_path')
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.ps1'
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.dsv'
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.sh'
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/bin'
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/lib/pkgconfig/swerve_bringup.pc'
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/lib/python3.10/site-packages'
+[1.140s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/bin'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.ps1'
+[1.141s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.dsv'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.sh'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.bash'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.zsh'
+[1.143s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_bringup/share/colcon-core/packages/swerve_bringup)
+[1.143s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(swerve_bringup)
+[1.143s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup' for CMake module files
+[1.144s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup' for CMake config files
+[1.144s] Level 1:colcon.colcon_core.shell:create_environment_hook('swerve_bringup', 'cmake_prefix_path')
+[1.144s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.ps1'
+[1.144s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.dsv'
+[1.145s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/hook/cmake_prefix_path.sh'
+[1.145s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/bin'
+[1.145s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/lib/pkgconfig/swerve_bringup.pc'
+[1.145s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/lib/python3.10/site-packages'
+[1.146s] Level 1:colcon.colcon_core.environment:checking '/home/syafihidayat/swerve_test/install/swerve_bringup/bin'
+[1.146s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.ps1'
+[1.147s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.dsv'
+[1.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.sh'
+[1.147s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.bash'
+[1.148s] INFO:colcon.colcon_core.shell:Creating package script '/home/syafihidayat/swerve_test/install/swerve_bringup/share/swerve_bringup/package.zsh'
+[1.148s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/syafihidayat/swerve_test/install/swerve_bringup/share/colcon-core/packages/swerve_bringup)
+[1.148s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.148s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.149s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.149s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.160s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.160s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.160s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.174s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.174s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/syafihidayat/swerve_test/install/local_setup.ps1'
+[1.175s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/syafihidayat/swerve_test/install/_local_setup_util_ps1.py'
+[1.177s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/syafihidayat/swerve_test/install/setup.ps1'
+[1.179s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/syafihidayat/swerve_test/install/local_setup.sh'
+[1.180s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/syafihidayat/swerve_test/install/_local_setup_util_sh.py'
+[1.180s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/syafihidayat/swerve_test/install/setup.sh'
+[1.182s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/syafihidayat/swerve_test/install/local_setup.bash'
+[1.183s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/syafihidayat/swerve_test/install/setup.bash'
+[1.184s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/syafihidayat/swerve_test/install/local_setup.zsh'
+[1.185s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/syafihidayat/swerve_test/install/setup.zsh'

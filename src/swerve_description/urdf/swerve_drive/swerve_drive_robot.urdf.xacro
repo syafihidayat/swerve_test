@@ -5,6 +5,7 @@
     <xacro:include filename="$(find swerve_description)/urdf/base/base.urdf.xacro"/>
     <xacro:include filename="$(find swerve_description)/urdf/swerve_drive/swerve_drive.urdf.xacro"/>
     <xacro:include filename="$(find swerve_description)/urdf/swerve_drive/wheel.transmission.xacro"/>
+	<xacro:include filename="$(find swerve_description)/urdf/swerve_drive/lidar.xacro"/>
 
 
     <link name="base_footprint"/>

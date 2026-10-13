@@ -1,0 +1,26 @@
+[0.020s] Invoking command in '/home/syafihidayat/swerve_test/build/swerve_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_control -- -j16 -l16
+[0.179s] [100%] Built target kinematic_node
+[0.207s] Invoked command in '/home/syafihidayat/swerve_test/build/swerve_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/syafihidayat/swerve_test/build/swerve_control -- -j16 -l16
+[0.209s] Invoking command in '/home/syafihidayat/swerve_test/build/swerve_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_control
+[0.220s] -- Install configuration: ""
+[0.221s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/lib/swerve_control/kinematic_node
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/launch
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/launch/joystick.launch.py
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/config
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/config/joystick.yaml
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/package_run_dependencies/swerve_control
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/parent_prefix_path/swerve_control
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.sh
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/ament_prefix_path.dsv
+[0.222s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.sh
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/environment/path.dsv
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.bash
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.sh
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.zsh
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/local_setup.dsv
+[0.223s] -- Installing: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.dsv
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/ament_index/resource_index/packages/swerve_control
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig.cmake
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/cmake/swerve_controlConfig-version.cmake
+[0.223s] -- Up-to-date: /home/syafihidayat/swerve_test/install/swerve_control/share/swerve_control/package.xml
+[0.246s] Invoked command in '/home/syafihidayat/swerve_test/build/swerve_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/syafihidayat/swerve_test/build/swerve_control

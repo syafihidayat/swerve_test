@@ -1,16 +1,31 @@
 teleop_twist_joy_node:
   ros__parameters:
+    # ---- Sumbu linear (stik kiri) ----
+    # PENTING: axis 2 bukan analog stick pada gamepad Xbox/PS di Linux.
+    # Axis 2 & 5 dipetakan sebagai TRIGGER (LT/RT) dan nilai idle-nya
+    # TIDAK 0 (biasanya -1.0). Kalau yaw memakai axis 2, begitu tombol
+    # enable ditekan robot langsung berputar sendiri karena trigger idle
+    # dianggap perintah putar. Karena itu yaw dipindah ke axis 3
+    # (stik kanan atas). Verifikasi dengan: ros2 topic echo /joy --once
     axis_linear:
       x: 1
       y: 0
     scale_linear:
       x: 0.8
-      y: -0.8
+      y: 0.8
 
+    # ---- Sumbu rotasi (stik kanan) ----
     axis_angular:
       yaw: 2
     scale_angular:
-      yaw: 2.5
+      # Diturunkan dari 2.5 -> 1.0 supaya lebih halus dan noise
+      # analog tidak langsung jadi perintah putar yang agresif.
+      yaw: 2.0
 
+    # ---- Enable ----
+    # enable_button: 7 adalah RT (right trigger = analog). Memakai
+    # trigger analog sebagai enable prone to false-trigger. Button 1
+    # (B / cross) adalah tombol digital yang lebih stabil.
+    # enable_button: 5
     enable_button: 7
     require_enable_button: true

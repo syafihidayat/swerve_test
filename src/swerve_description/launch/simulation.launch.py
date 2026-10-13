@@ -8,6 +8,7 @@ from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch.actions import TimerAction
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
@@ -36,11 +37,14 @@ def generate_launch_description():
         value_type=str
     )
 
+    world_path = os.path.join(get_package_share_directory('swerve_description'),'worlds', 'maze.world')
+
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gazebo.launch.py')
         ),
-        launch_arguments={'world': 'empty.world', 'paused': 'false', 'gui': 'true'}.items()
+        launch_arguments={'world': world_path, 'paused': 'false', 'gui': 'true'}.items()
+        # launch_arguments={'world': 'empty.world', 'paused': 'false', 'gui': 'true'}.items()
     )
 
     robot_state_publisher = Node(

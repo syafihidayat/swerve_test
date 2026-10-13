@@ -1,0 +1,7 @@
+/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp: In member function ‘void KinematicNode::publishZeroCommand()’:
+/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:260:26: warning: unused variable ‘name’ [-Wunused-variable]
+  260 |         for (const auto &name : steering_names_)
+      |                          ^~~~
+/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic_node.cpp:266:26: warning: unused variable ‘name’ [-Wunused-variable]
+  266 |         for (const auto &name : wheel_names_)
+      |                          ^~~~

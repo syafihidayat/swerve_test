@@ -1,0 +1,14 @@
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:[m[K In member function ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&, int)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:185:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  185 |                               : a + static_cast<float>(M_PI)
+      |                                                             [01;31m[K^[m[K
+      |                                                             [32m[K;[m[K
+  186 |     [32m[K}[m[K
+      |     [32m[K~[m[K                                                        
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:166:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcurrentAngle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  166 | ptimizeModule(float desiredSpeed, float desiredAngle, [01;35m[Kfloat currentAngle[m[K,
+      |                                                       [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/kinematic_node.dir/build.make:90: CMakeFiles/kinematic_node.dir/src/kinematic.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kinematic_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

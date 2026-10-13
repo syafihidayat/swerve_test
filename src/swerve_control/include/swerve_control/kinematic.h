@@ -64,6 +64,11 @@ public:
                               float speed3, float angle3,
                               float speed4, float angle4);
 
+    // Reset semua sudut internal (last_angle_ dan status flip) kembali ke 0.
+    // Dipanggil node ketika robot idle supaya tidak ada sudut "tersisa"
+    // dari gerakan sebelumnya yang membuat roda bergerak sia-sia.
+    void resetModuleAngles();
+
     // Optimisasi steering: minimalkan rotasi module (hindari muter >90 derajat)
     // currentAngle -> sudut wheel sekarang (rad, biasanya dari "last commanded angle",
     //                 lihat catatan di kinematic_node.cpp)
@@ -92,7 +97,7 @@ private:
     // simpan angle terakhir yang valid per module, supaya atan2() tidak
     // "liar" saat vix/viy mendekati nol
     float last_angle_[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-    float angle_deadband_speed_ = 0.02f; // m/s, sesuaikan dengan robot kamu
+    float angle_deadband_speed_ = 0.08f; // m/s, sesuaikan dengan robot kamu
 
     // ---- Fix #3: hysteresis untuk keputusan flip 90 derajat ----
     // simpan status flip terakhir per module supaya tidak chattering

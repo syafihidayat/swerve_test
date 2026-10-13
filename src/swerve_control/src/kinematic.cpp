@@ -128,38 +128,98 @@ Kinematic::velocities Kinematic::getVelocities(float speed1, float angle1,
 // module_index (0..3) dipakai untuk menyimpan status flip terakhir
 // per module secara terpisah -> mencegah chattering (fix #3).
 // ============================================================
+// void Kinematic::optimizeModule(float desiredSpeed, float desiredAngle, float currentAngle,
+//                                 float &outSpeed, float &outAngle, int module_index)
+// {
+//     float delta = desiredAngle - currentAngle;
+
+//     while (delta > M_PI)  delta -= 2 * M_PI;
+//     while (delta < -M_PI) delta += 2 * M_PI;
+
+//     const float flip_threshold = M_PI / 2.0f;
+//     const float hysteresis = toRad(5.0f); // margin 5 derajat, sesuaikan kalau perlu
+
+//     bool should_flip;
+//     if (last_flip_state_[module_index])
+//     {
+//         // sebelumnya sudah flip -> butuh delta lebih kecil dulu buat balik lagi
+//         should_flip = fabs(delta) > (flip_threshold - hysteresis);
+//     }
+//     else
+//     {
+//         should_flip = fabs(delta) > (flip_threshold + hysteresis);
+//     }
+//     last_flip_state_[module_index] = should_flip;
+
+//     if (should_flip)
+//     {
+//         outSpeed = -desiredSpeed;
+//         outAngle = currentAngle + delta - (delta > 0 ? M_PI : -M_PI);
+//     }
+//     else
+//     {
+//         outSpeed = desiredSpeed;
+//         outAngle = currentAngle + delta;
+//     }
+// }
+
 void Kinematic::optimizeModule(float desiredSpeed, float desiredAngle, float currentAngle,
                                 float &outSpeed, float &outAngle, int module_index)
 {
-    float delta = desiredAngle - currentAngle;
+    // float a = std::remainder(desiredAngle, 2.0f * static_cast<float>(M_PI));
 
-    while (delta > M_PI)  delta -= 2 * M_PI;
-    while (delta < -M_PI) delta += 2 * M_PI;
+    const float pi = static_cast<float>(M_PI);
+    const float limit = pi / 2.0f + toRad(30.0f);
+    const float hysteresis = toRad(10.0f);
 
-    const float flip_threshold = M_PI / 2.0f;
-    const float hysteresis = toRad(5.0f); // margin 5 derajat, sesuaikan kalau perlu
+    float c1 = std::remainder(desiredAngle, 2.0f * pi);
+    float c2 = (c1 > 0.0f) ? c1 - pi : c1 + pi;
 
-    bool should_flip;
-    if (last_flip_state_[module_index])
-    {
-        // sebelumnya sudah flip -> butuh delta lebih kecil dulu buat balik lagi
-        should_flip = fabs(delta) > (flip_threshold - hysteresis);
-    }
-    else
-    {
-        should_flip = fabs(delta) > (flip_threshold + hysteresis);
-    }
-    last_flip_state_[module_index] = should_flip;
+    float d1 = std::fabs(c1 - currentAngle);
+    float d2 = std::fabs(c2 - currentAngle);
 
-    if (should_flip)
+    if(last_flip_state_[module_index]) d2 -= hysteresis;
+    else                               d2 += hysteresis;
+
+    const bool ok1 = std::fabs(c1) <= limit;
+    const bool ok2 = std::fabs(c2) <= limit;
+
+    bool flip;
+    if(ok1 && !ok2)      flip = false;
+    else if(!ok1 && ok2) flip = true;
+    else                 flip = (d2 < d1);
+
+    last_flip_state_[module_index] = flip;
+
+    outSpeed = flip ? -desiredSpeed : desiredSpeed;
+    outAngle = flip ? c2 : c1;
+
+    // const float threshold = last_flip_state_[module_index] ? (half_pi - hysteresis)
+    //                                                        :(half_pi + hysteresis);
+
+
+    // const bool flip = std::fabs(a) > threshold;
+    // last_flip_state_[module_index] = flip;
+
+    // if(flip)
+    // {
+    //     outSpeed = -desiredSpeed;
+    //     outAngle = (a > 0.0f) ? a - static_cast<float>(M_PI)
+    //                           : a + static_cast<float>(M_PI);
+    // }
+    // else
+    // {
+    //     outSpeed = desiredSpeed;
+    //     outAngle = a;
+    // }
+}
+
+void Kinematic::resetModuleAngles()
+{
+    for (int i = 0; i < 4; i++)
     {
-        outSpeed = -desiredSpeed;
-        outAngle = currentAngle + delta - (delta > 0 ? M_PI : -M_PI);
-    }
-    else
-    {
-        outSpeed = desiredSpeed;
-        outAngle = currentAngle + delta;
+        last_angle_[i] = 0.0f;
+        last_flip_state_[i] = false;
     }
 }
 

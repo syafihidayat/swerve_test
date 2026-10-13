@@ -1,0 +1,5 @@
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:[m[K In member function ‘[01m[Kvoid Kinematic::optimizeModule(float, float, float, float&, float&, int)[m[K’:
+[01m[K/home/syafihidayat/swerve_test/src/swerve_control/src/kinematic.cpp:166:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcurrentAngle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  166 | ptimizeModule(float desiredSpeed, float desiredAngle, [01;35m[Kfloat currentAngle[m[K,
+      |                                                       [01;35m[K~~~~~~^~~~~~~~~~~~[m[K
+

@@ -16,10 +16,18 @@ steering_pid_controller:
     command_interface: velocity
     reference_and_state_interfaces: [position]
     gains:
-      front_right_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
-      front_left_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
-      rear_right_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
-      rear_left_steering_joint: {p: 30.0, i: 0.5, d: 0.1}
+      # Gain DITURUNKAN dari p:30/i:0.5 -> p:8/i:0.0.
+      # Alasan: command_interface=velocity, jadi output PID dipakai
+      # langsung sebagai kecepatan motor. Dengan p:30, error posisi
+      # 0.1 rad sudah jadi output 3 rad/s (kuat banget), dan i:0.5
+      # menahan error sehingga terjadi overshoot + integral windup.
+      # Akibatnya servo steering gelisah dan robot bergerak "ngawur"
+      # bahkan saat joystick diam. i dihilangkan 0 supaya tidak ada
+      # penumpukan error yang tidak pernah hilang.
+      front_right_steering_joint: {p: 8.0, i: 0.0, d: 0.0}
+      front_left_steering_joint: {p: 8.0, i: 0.0, d: 0.0}
+      rear_right_steering_joint: {p: 8.0, i: 0.0, d: 0.0}
+      rear_left_steering_joint: {p: 8.0, i: 0.0, d: 0.0}
 
       # front_right_steering_joint: {p: 1.0, i: 0.0, d: 0.0}
       # front_left_steering_joint: {p: 1.0, i: 0.0, d: 0.0}
